@@ -1,0 +1,29 @@
+name: Claude Plugin Smoke Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      plugin_name:
+        description: name of the plugin to test
+        default: 'hello@yi1306c12-lab'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: anthropics/claude-code-action@9db594c7a0e82298c121c18b7f08aa1579ce7341 # v1.0.185
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          plugins: ${{ inputs.plugin_name }}
+          plugin_marketplaces: https://github.com/yi1306c12-lab/claude-marketplace.git
+          claude_args: |
+            --model haiku
+          show_full_output: true
+          prompt: |
+            You are a plugin tester.
+            1. Report the loaded plugin name and list every skill it provides.
+            2. Invoke each skill once with a minimal input, and show the raw output.
+            3. Report anything that failed to load or execute.

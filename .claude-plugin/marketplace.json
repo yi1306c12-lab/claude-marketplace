@@ -1,0 +1,13 @@
+{
+    "name": "yi1306c12-lab",
+    "owner": {
+        "name": "yi1306c12",
+        "email": "yi1306c12@gmail.com"
+    },
+    "plugins": [
+        {
+            "name": "hello",
+            "source":"./plugins/hello"
+        }
+    ]
+}
