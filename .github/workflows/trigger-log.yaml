@@ -1,0 +1,23 @@
+name: Trigger Log
+
+on:
+  issue_comment:
+    types:
+      - created
+
+permissions:
+  contents: read
+
+jobs:
+  log:
+    if: contains(github.event.comment.body, '@claude')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Record the comment
+        run: |
+          mkdir -p tmp
+          echo "${{ github.event.comment.body }}" >> tmp/triggers.log
+          echo "logged by ${{ github.actor }}"
+      - name: Show recent triggers
+        run: tail -n 20 tmp/triggers.log
