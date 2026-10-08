@@ -2,12 +2,16 @@
     "name": "yi1306c12-lab",
     "owner": {
         "name": "yi1306c12",
-        "email": "yi1306c12@gmail.com"
+        "email": "32928063+yi1306c12@users.noreply.github.com"
     },
     "plugins": [
         {
             "name": "hello",
             "source":"./plugins/hello"
+        },
+        {
+            "name": "pr",
+            "source":"./plugins/pr"
         }
     ]
 }
