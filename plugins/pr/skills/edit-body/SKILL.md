@@ -24,7 +24,7 @@ Restating it wastes the reader's time and hides the one thing they came for: whe
 Call out changes that fall outside the issue, with the reason they were needed.
 These are the ones most likely to surprise a reviewer, and leaving them unmentioned is how unrelated work slips in unnoticed.
 
-Describe what changed and why from the diff alone when no issue is linked, and say that none was.
+Describe what changed and why from the diff alone when no issue is linked.
 
 ## What to keep
 

@@ -50,7 +50,7 @@ Fetch these once.
 - The linked issue, from `gh pr view <number> --json closingIssuesReferences`.
   - Branches are created with `gh issue develop`, which is what establishes that link. If it comes back empty, fall back to the leading number of the head branch name.
 
-If there is no linked issue, say so and review from the diff alone.
+If there is no linked issue, review from the diff alone.
 
 If a fetch fails, note which one and continue with the rest.
 
@@ -66,7 +66,7 @@ Do this before reviewing the diff.
 
 ### 4. Review the diff
 
-Report only what the diff cannot show, such as:
+Report:
 
 - bugs
 - security problems

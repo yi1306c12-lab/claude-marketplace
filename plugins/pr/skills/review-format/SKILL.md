@@ -64,7 +64,7 @@ The author needs enough to disagree with you.
 
 ## Tips
 
-Report only what the diff cannot show:
+Report only what the diff cannot show, such as:
 
 - what you changed in the pull request body
 - an unchecked claim that no finding rests on
