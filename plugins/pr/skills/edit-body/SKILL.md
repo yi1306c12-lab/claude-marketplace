@@ -24,7 +24,7 @@ Restating it wastes the reader's time and hides the one thing they came for: whe
 Call out changes that fall outside the issue, with the reason they were needed.
 These are the ones most likely to surprise a reviewer, and leaving them unmentioned is how unrelated work slips in unnoticed.
 
-Describe what changed and why from the diff alone when no issue is linked, and say that none was.
+Describe what changed and why from the diff alone when no issue is linked.
 
 ## What to keep
 
@@ -39,5 +39,4 @@ Write the body to `tmp/pr-body.md`, then apply it:
 
     gh pr edit <number> --body-file tmp/pr-body.md
 
-Name the issue you used as the source of the mapping in your review report.
-The author needs to see whether you resolved the right one.
+Say in your review report that you rewrote the body, and name the issue you mapped it to.

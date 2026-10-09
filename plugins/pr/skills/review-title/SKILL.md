@@ -58,16 +58,7 @@ A title that names the implementation where the issue asked for an outcome reads
 
 ## Output
 
-Put your findings in the review's own sections rather than a block of their own, as `pr:review-format` describes.
+Write nothing when the title is appropriate.
 
-Say so and propose nothing when the title is appropriate.
-Record it as a `note` under `Tips`: you checked the title and found nothing to change.
-Offering alternatives to a valid title turns every review into an argument about wording.
-
-Raise one item under `Requested changes` when the title is wrong.
-List the replacements in its body, in order of preference, each with a short reason.
-
-Judge the type and the format.
-Leave the wording of the description alone unless it is misleading; how the author phrases their own change is their call.
-
-Name whichever of the diff and the issue was unavailable instead of judging without it.
+Raise a single item when the title is wrong, and list the replacements in order of preference, each with a short reason.
+Correct the type and the format only; how the author words their own change is their call, unless the wording misleads.
