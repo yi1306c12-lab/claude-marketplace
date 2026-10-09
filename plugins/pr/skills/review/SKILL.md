@@ -75,7 +75,7 @@ Report:
 
 Cite each finding as `path:line` and give the reason, not just the instruction — the author has to be able to disagree with your reasoning.
 
-Conditions that already hold elsewhere in the repository are not findings for this pull request, however related they seem.
+Conditions the diff does not touch are not findings for this pull request, however related they seem.
 
 ### 5. Report
 
