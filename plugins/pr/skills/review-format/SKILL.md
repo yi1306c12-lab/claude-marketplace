@@ -67,7 +67,7 @@ The author needs enough to disagree with you.
 Report only what the diff cannot show:
 
 - what you changed in the pull request body
-- what you left unchecked, and which of the three applies
+- a claim you left unchecked
 - an alternative you weighed and rejected
 
 Write each as an unnumbered list item, so that the section is unmistakably not a to-do list.

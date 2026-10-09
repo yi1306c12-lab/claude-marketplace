@@ -35,6 +35,8 @@ Say which of these applies to a claim you left unchecked:
 - no tool you may use reaches it
 - you chose not to look it up
 
+Say it next to the finding that rests on it, or in `Tips` when no finding does.
+
 ## Your process
 
 ### 1. Gather

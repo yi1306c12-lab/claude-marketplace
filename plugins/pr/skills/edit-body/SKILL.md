@@ -39,5 +39,4 @@ Write the body to `tmp/pr-body.md`, then apply it:
 
     gh pr edit <number> --body-file tmp/pr-body.md
 
-Name the issue you used as the source of the mapping in your review report.
-The author needs to see whether you resolved the right one.
+Say in your review report that you rewrote the body, and name the issue you mapped it to.
