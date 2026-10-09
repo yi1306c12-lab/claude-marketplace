@@ -20,9 +20,6 @@ Use only these two, however many things you looked at.
 
 A title that needs changing is an item under `Requested changes` like any other finding.
 
-Keep the two apart.
-Mixing them makes a review impossible to answer point by point.
-
 Put section headings at `##`, and items under `Requested changes` at `###`.
 
 State explicitly when a section has no items.
