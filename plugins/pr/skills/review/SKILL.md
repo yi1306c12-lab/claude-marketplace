@@ -25,6 +25,16 @@ Writes outside the working tree are refused, so `/tmp` will fail.
 Pass long text as `gh ... --body-file <file>`, never inline with `--body`.
 Backticks and `$` in a body would otherwise be expanded by the shell before GitHub ever sees them.
 
+## What you may claim
+
+Look up what you can before leaving a claim unchecked; `WebFetch` reaches documentation and `gh` reaches the repository.
+
+Say which of these applies to a claim you left unchecked:
+
+- a tool failed
+- no tool you may use reaches it
+- you chose not to look it up
+
 ## Your process
 
 ### 1. Gather
@@ -39,7 +49,6 @@ Fetch these once.
 If there is no linked issue, say so and review from the diff alone.
 
 If a fetch fails, note which one and continue with the rest.
-Say in the report what you could not read, so nobody mistakes a gap for a clean result.
 
 ### 2. Judge the title
 
@@ -62,7 +71,7 @@ Report:
 
 Cite each finding as `path:line` and give the reason, not just the instruction — the author has to be able to disagree with your reasoning.
 
-Never speculate: if verifying a finding was not possible in this environment, say what you could not verify rather than guessing at it.
+Conditions that already hold elsewhere in the repository are not findings for this pull request, however related they seem.
 
 ### 5. Report
 

@@ -65,15 +65,12 @@ Order `(blocking)` items before `(non-blocking)` ones.
 Cite the location as `path:line`, and give the reason rather than just the instruction.
 The author needs enough to disagree with you.
 
-Never speculate.
-Say what you could not verify when verifying was not possible in this environment, instead of reporting it as a finding.
-
 ## Tips
 
 Report only what the diff cannot show:
 
 - what you changed in the pull request body
-- what the review could not reach
+- what you left unchecked, and which of the three applies
 - an alternative you weighed and rejected
 
 Write each as an unnumbered list item, so that the section is unmistakably not a to-do list.
