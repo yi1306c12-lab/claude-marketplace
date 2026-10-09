@@ -37,6 +37,8 @@ Say which of these applies to a claim you left unchecked:
 
 Say it next to the finding that rests on it, or in `Tips` when no finding does.
 
+Never mark an item `(blocking)` when it rests on a claim you chose not to look up.
+
 ## Your process
 
 ### 1. Gather
@@ -64,7 +66,7 @@ Do this before reviewing the diff.
 
 ### 4. Review the diff
 
-Report:
+Report only what the diff cannot show, such as:
 
 - bugs
 - security problems
