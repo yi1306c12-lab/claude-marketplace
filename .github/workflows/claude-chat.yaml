@@ -1,4 +1,4 @@
-name: Claude PR Review
+name: Claude Chat
 
 on:
   issue_comment:
@@ -6,25 +6,22 @@ on:
       - created
 
 concurrency:
-  group: pr-review-${{ github.event.issue.number }}
-  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event.issue.number }}
+  cancel-in-progress: false
 
 permissions:
   contents: read
-  issues: write
-  pull-requests: write
   id-token: write
 
 jobs:
-  review:
+  claude-chat:
     if: >-
-      github.event.issue.pull_request &&
+      github.event.comment.user.type == 'User' &&
       contains(github.event.comment.body, '@claude')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: refs/pull/${{ github.event.issue.number }}/head
           fetch-depth: 0
       - uses: anthropics/claude-code-action@9db594c7a0e82298c121c18b7f08aa1579ce7341 # v1.0.185
         with:
@@ -37,20 +34,18 @@ jobs:
                 "allow": [
                   "Bash(gh issue list:*)",
                   "Bash(gh issue view:*)",
-                  "Bash(gh pr edit:*)",
-                  "Bash(gh pr comment:*)",
-                  "Bash(gh pr view:*)",
-                  "Bash(gh pr list:*)",
-                  "Bash(gh pr diff:*)",
-                  "Bash(git log:*)",
-                  "Bash(git diff:*)",
-                  "Bash(git blame:*)",
                   "Bash(gh label list:*)",
-                  "Bash(gh run view:*)",
+                  "Bash(gh pr diff:*)",
+                  "Bash(gh pr list:*)",
+                  "Bash(gh pr view:*)",
                   "Bash(gh run list:*)",
-                  "Write(tmp/**)",
+                  "Bash(gh run view:*)",
+                  "Bash(git blame:*)",
+                  "Bash(git diff:*)",
+                  "Bash(git log:*)",
                   "WebFetch",
-                  "WebSearch"
+                  "WebSearch",
+                  "Write(tmp/**)"
                 ]
               }
             }
@@ -58,5 +53,4 @@ jobs:
             actions:read
           claude_args: |
             --model opus
-          prompt: |
-            Review pull request ${{ github.event.issue.number }} in repository ${{ github.repository }}.
+          show_full_output: true
