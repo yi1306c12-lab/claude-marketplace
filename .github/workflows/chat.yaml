@@ -1,0 +1,47 @@
+name: Chat
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  chat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: anthropics/claude-code-action@9db594c7a0e82298c121c18b7f08aa1579ce7341 # v1.0.185
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          plugins: pr@yi1306c12-lab
+          plugin_marketplaces: https://github.com/yi1306c12-lab/claude-marketplace.git
+          settings: |
+            {
+              "permissions": {
+                "allow": [
+                  "Bash(gh issue list:*)",
+                  "Bash(gh issue view:*)",
+                  "Bash(gh label list:*)",
+                  "Bash(gh pr diff:*)",
+                  "Bash(gh pr list:*)",
+                  "Bash(gh pr view:*)",
+                  "Bash(gh run list:*)",
+                  "Bash(gh run view:*)",
+                  "Bash(git blame:*)",
+                  "Bash(git diff:*)",
+                  "Bash(git log:*)",
+                  "WebFetch",
+                  "WebSearch",
+                  "Write(tmp/**)"
+                ]
+              }
+            }
+          additional_permissions: |
+            actions:read
+          claude_args: |
+            --model opus
+          show_full_output: true
