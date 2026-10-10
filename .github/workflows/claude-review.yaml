@@ -13,5 +13,5 @@ jobs:
   claude-review:
     if: >-
       github.event.pull_request.user.type == 'User'
-    uses: yi1306c12-lab/claude-marketplace/.github/workflows/review.yaml@main
+    uses: yi1306c12-lab/claude-kit/.github/workflows/review.yaml@main
     secrets: inherit

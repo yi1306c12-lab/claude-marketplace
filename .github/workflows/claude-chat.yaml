@@ -18,5 +18,5 @@ jobs:
     if: >-
       github.event.comment.user.type == 'User' &&
       contains(github.event.comment.body, '@claude')
-    uses: yi1306c12-lab/claude-marketplace/.github/workflows/chat.yaml@main
+    uses: yi1306c12-lab/claude-kit/.github/workflows/chat.yaml@main
     secrets: inherit
