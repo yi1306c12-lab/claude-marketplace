@@ -18,7 +18,7 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           plugins: pr@yi1306c12-lab
-          plugin_marketplaces: https://github.com/yi1306c12-lab/claude-marketplace.git
+          plugin_marketplaces: https://github.com/yi1306c12-lab/claude-kit.git
           settings: |
             {
               "permissions": {
