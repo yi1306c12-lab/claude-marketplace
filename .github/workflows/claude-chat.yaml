@@ -19,4 +19,5 @@ jobs:
       github.event.comment.user.type == 'User' &&
       contains(github.event.comment.body, '@claude')
     uses: yi1306c12-lab/claude-kit/.github/workflows/chat.yaml@main
-    secrets: inherit
+    secrets:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
